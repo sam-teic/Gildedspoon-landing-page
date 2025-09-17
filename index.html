@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Lato:wght@400;700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>The Gilded Spoon</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --brand-primary: #9A3412;
+            --brand-primary-hover: #7C2D12;
+            --brand-secondary: #F3E7E8;
+            --brand-background: #FCF8F8;
+            --text-primary: #281814;
+            --text-secondary: #6B4F4B;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .menu-open {
+            display: flex !important;
+        }
+    </style>
+<script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('menu-open');
+        }
+    </script>
+</head>
+<body class="bg-[var(--brand-background)] text-[var(--text-primary)]">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--brand-secondary)] px-4 sm:px-6 md:px-12 py-4 shadow-sm sticky top-0 bg-[var(--brand-background)] z-50 transition-all duration-300">
+<div class="flex items-center gap-4 text-[var(--text-primary)]">
+<svg class="size-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-[var(--text-primary)] text-xl sm:text-2xl font-bold leading-tight tracking-wide">The Gilded Spoon</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 lg:gap-10">
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">About</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Menu</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Reservations</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Contact</a>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-11 px-6 bg-[var(--brand-primary)] text-[#fcf8f8] text-base font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105">
+<span class="truncate">Reserve a Table</span>
+</button>
+</nav>
+<div class="md:hidden">
+<button class="text-[var(--text-primary)] focus:outline-none" onclick="toggleMenu()">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</header>
+<div class="hidden md:hidden absolute top-16 right-0 w-full bg-[var(--brand-background)] shadow-lg z-40 flex-col items-center gap-4 py-4" id="mobile-menu">
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">About</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Menu</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Reservations</a>
+<a class="text-[var(--text-primary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Contact</a>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-11 px-6 bg-[var(--brand-primary)] text-[#fcf8f8] text-base font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105 mt-2">
+<span class="truncate">Reserve a Table</span>
+</button>
+</div>
+<main class="flex flex-1 flex-col">
+<section class="flex min-h-[560px] items-center justify-center bg-cover bg-center bg-no-repeat" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGxzoaZ2ekafOfoDqFkDWaD-4K2i89YeXa7VwwCtfaiD24Pc6SswvTg8ZMbpugx8Fa7cNt4CyvWwe6aCcxxQJoFb1O_2oKBpB3PCnZKp1UdKFrfC31I3e7PjBruSyVmgHoymE2OZ-OFbF4cXGFYGsqjDqlrv46AKpbIzReRgipnfY8vo9sqEwYEb1PnzVwsZAfBKj4uR3z3mmvPIgG_1_qrDLdySXhTFaYhj-eAGjBJ4Z4qP7tIux-5f-_9mFksLJOJsmwOnTXRHJV");'>
+<div class="flex flex-col gap-6 text-center text-white px-4">
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">Experience Fine Dining Redefined</h1>
+<p class="text-lg sm:text-xl font-light leading-relaxed max-w-3xl mx-auto">Indulge in an exquisite culinary journey at The Gilded Spoon, where every dish is a masterpiece and every moment is unforgettable.</p>
+<button class="flex self-center min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 sm:h-14 sm:px-8 bg-[var(--brand-primary)] text-[#fcf8f8] text-base sm:text-lg font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105">
+<span class="truncate">Reserve a Table</span>
+</button>
+</div>
+</section>
+<section class="py-16 sm:py-24 px-4 sm:px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+<div class="order-2 md:order-1">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">About The Gilded Spoon</h2>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-loose">At The Gilded Spoon, we are dedicated to providing an unparalleled dining experience. Our cuisine blends classic techniques with innovative flavors, creating dishes that are both familiar and surprising. Our mission is to create a memorable experience for every guest, from the ambiance to the service to the food.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 order-1 md:order-2">
+<img alt="Interior of the restaurant" class="w-full h-auto aspect-square object-cover rounded-lg shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRZ6bsMTkh_CkS_C0Aeb6GLdOFUkhGe5R8S7nEiT59d-rSXqqDRf5JvpjwauRA7oWBV4wSeF-SZD8_JDUPj6fFJwMAHWjzlJgjpUnj9CMFkxYVmW7wJJ7pWiMrdhcvyNMEgddNjlrpucHfE6o3l4LM2mNOaIUlEUoIDARBO0u2-JTbbqY3OXmyBxth60_UFQ-7xjuO8fa4adjIj6U9e3TfvpXDzPDtJlZje1FwRj3LjC9OkfoDoeCK8mVKJaHtS7mHGI-K-EJJ0WFJ"/>
+<img alt="Close-up of a dish" class="w-full h-auto aspect-square object-cover rounded-lg mt-4 sm:mt-8 shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sMf_n2urK4ExFz0Yq6yxOSq9z-eQdrbfs4K-Nw_I-ge9qjPc3s9Z66JY2dta4wa4I5EuxJk9CagMb7tFbATNridsQWiY60r5HZaHZZjsQJ8K37643QdrYCaiNsXCtaos99QcYv4W0tTz_GvldDuCYPI_gjgd-H_Uq6kfJY9cPUE6Fnwq_Zn1OBnkE_AM5JSy8GDoaq_Eqs7cr3zev9LM8h7vA5vQ1xzjh8_dVpPP4AeWeKkVYcH1nvJB5ETgY_ELSwCzdh9G62u5"/>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-[var(--brand-secondary)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-center mb-12">Menu Highlights</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-lg shadow-md"><img alt="Seared Scallops" class="w-full h-auto aspect-[4/3] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkfAZRn3S4SSBt2ccFQpreTgD0MFfwYw-6n5sAAfcBGnaAlKI9WvN-KBA-ZlnGzsGQj_fhslFv453UmoFAlH_F8vzEO628wErKvrJU2VS5V2S6feni7_FHeLVq9BQ7xnFEj7MqTz1ABxzndmL46FrqRBs1KWhlUiXqgZXooM6vpXPH1QtGvrjvN--igdsyonx3qBNclHYM-9XyoruMFwaqonNJDB0EoGOsK0cf9fMY3amJnIDnQsvBBdFj-QU5b2jGlYEf7atsKu7q"/></div>
+<div>
+<h3 class="text-[var(--text-primary)] text-xl sm:text-2xl font-semibold leading-snug">Seared Scallops with Citrus Glaze</h3>
+<p class="text-[var(--text-secondary)] text-base font-normal leading-relaxed mt-2">Delicate scallops seared to perfection, served with a tangy citrus glaze.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-lg shadow-md"><img alt="Pan-Seared Halibut" class="w-full h-auto aspect-[4/3] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCinAwxSJA2LVUQ1c-giNd-u_E4zZjKJTgDvdrKc9H8Crq5YYX--73SVgElsD2xs18T8y2PjH2H6MLNk4sP8CSiZ8qwbNt78Znk000Ao8vFwUp4XaXC5UXDFEuPZT86UQcQgrPMTnc-ParskwSK82gz50UEMFf3x9Cn1B6GlpcRkSa-nMVK4egeR2DLtFoOwGTW_ceuYYFpFjWRaqxTKhCailoFcP2lkxdCcc843tpD2e_u0sdJnakIWcSJ7gylgWYXR5SvEv_IeD1N"/></div>
+<div>
+<h3 class="text-[var(--text-primary)] text-xl sm:text-2xl font-semibold leading-snug">Pan-Seared Halibut with Asparagus</h3>
+<p class="text-[var(--text-secondary)] text-base font-normal leading-relaxed mt-2">Fresh halibut pan-seared and served with a side of tender asparagus.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="overflow-hidden rounded-lg shadow-md"><img alt="Chocolate Decadence" class="w-full h-auto aspect-[4/3] object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0rBOessTzOWN0vpN8Q37ONMhH9RvDOYqQhpC2xv0VpDHf_VxYXfmPuKyCtoHDrlsn3c3YUKzs5aJ8TbvztfsrJW4wbkvvBLITrIBmkPBlooyy-N0df5xJ1QB6nq3HcEhv8nblkIBaJTZMlCeL8-eY9TuUsT0OmwKAXyGh_Gie1p2cp3Sw_ANMQczq9p1JQzn6j1NMhypmjWa7sOMeIPtpYOB8FzLPviWXY6vuI-jBZWnn8ByhZyIjPRkg8oCtUvdtjg4dsyKYUeKp"/></div>
+<div>
+<h3 class="text-[var(--text-primary)] text-xl sm:text-2xl font-semibold leading-snug">Chocolate Decadence with Raspberry Coulis</h3>
+<p class="text-[var(--text-secondary)] text-base font-normal leading-relaxed mt-2">Rich chocolate dessert with a hint of raspberry, garnished with edible gold leaf.</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 sm:h-14 sm:px-8 bg-transparent text-[var(--brand-primary)] text-base sm:text-lg font-bold leading-normal tracking-wide border-2 border-[var(--brand-primary)] hover:bg-[var(--brand-primary)] hover:text-white transition-all duration-300 transform hover:scale-105">
+<span class="truncate">View Full Menu</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 px-4 sm:px-6" id="loyalty-program">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">Join Our Loyalty Program</h2>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-loose max-w-2xl mx-auto mb-8">Become a member of The Gilded Spoon family and enjoy exclusive benefits, from special discounts to unique offers. Sign up now to start your journey of rewards.</p>
+<form class="max-w-lg mx-auto grid grid-cols-1 gap-y-6">
+<div>
+<label class="text-[var(--text-primary)] text-base sm:text-lg font-medium leading-normal pb-2 block text-left" for="loyalty-name">Name</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] border-2 border-transparent bg-[var(--brand-secondary)] h-12 sm:h-14 placeholder:text-[var(--text-secondary)] px-4 sm:px-5 text-base font-normal leading-normal transition-all duration-300 focus:border-[var(--brand-primary)]" id="loyalty-name" placeholder="Enter your name" value=""/>
+</div>
+<div>
+<label class="text-[var(--text-primary)] text-base sm:text-lg font-medium leading-normal pb-2 block text-left" for="loyalty-email">Email</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] border-2 border-transparent bg-[var(--brand-secondary)] h-12 sm:h-14 placeholder:text-[var(--text-secondary)] px-4 sm:px-5 text-base font-normal leading-normal transition-all duration-300 focus:border-[var(--brand-primary)]" id="loyalty-email" placeholder="Enter your email" type="email" value=""/>
+</div>
+<div class="text-center">
+<button class="flex w-full sm:w-auto sm:mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 sm:h-14 sm:px-8 bg-[var(--brand-primary)] text-[#fcf8f8] text-base sm:text-lg font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105 mt-4">
+<span class="truncate">Join Now</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-[var(--brand-secondary)]" id="reservations">
+<div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4">Reserve Your Table</h2>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-loose mb-8">Booking a table has never been easier. Choose your preferred platform below to secure your spot for an unforgettable dining experience.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
+<a class="flex items-center justify-center gap-3 min-w-[84px] max-w-[480px] cursor-pointer rounded-lg h-14 px-6 bg-white text-[#000000] text-base font-bold leading-normal tracking-wide shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105" href="#"><img alt="OpenTable Logo" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoQt40AMTdwUCnXv06rq49_N4shdTMq-aa655CeZJ--Tol_yElwY80zLmIaIL5XxP4ZfOa2RF6w1UZSQEGfHMN37Sg6WIPzEgbXvdBhQVlmdN5cI6KMpDvASheyx4LWjV-wRA9pOb_d2xlO7ByW3SMFpNqyxzIpJmrDOGZbZEZKP8Y94JHJD9bXdgB1T6yxTZlZWNhxyayo2Lm9Vu8YdddtOr1kWzd1pj2IurxCyhfw_bMzUwEgX6NlwFlkDwb8c3lHgKKArvCXPmZ"/> </a>
+<a class="flex items-center justify-center gap-3 min-w-[84px] max-w-[480px] cursor-pointer rounded-lg h-14 px-6 bg-[#da3743] text-white text-base font-bold leading-normal tracking-wide shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105" href="#">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M37.52,24.12c0-5.32-2.78-8.8-7.56-8.8-4.9,0-8,3.56-8,8.8,0,5.49,3,8.8,8.21,8.8,3.67,0,6.23-1.61,7.31-3.92l-4.5-1.5c-.53,1.25-1.5,2.12-2.82,2.12-1.74,0-2.82-1.25-3-2.9h12.18c.08-.42.12-.83.12-1.53M22.92,24.12c0-3.3,1.67-5.5,4.9-5.5,3.15,0,4.67,2.2,4.67,5.5H22.92M48,24c0-13.25-10.75-24-24-24S0,10.75,0,24,10.75,48,24,48,48,37.25,48,24m-12.79,0c0,5.06-4.14,9.21-9.21,9.21-5.06,0-9.21-4.14-9.21-9.21s4.14-9.21,9.21-9.21c5.06,0,9.21,4.14,9.21,9.21Z"></path>
+</svg>
+<span class="truncate">Reserve with Resy</span>
+</a>
+</div>
+<div class="mt-8 text-center">
+<p class="text-[var(--text-secondary)] text-sm sm:text-base font-normal leading-normal">For parties of 8 or more, please <a class="text-[var(--brand-primary)] hover:underline" href="#">contact us directly</a>.</p>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 px-4 sm:px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+<div class="order-2 md:order-1">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-8">Contact Us</h2>
+<div class="flex flex-col gap-6">
+<p class="text-[var(--text-secondary)] text-base sm:text-lg">123 Culinary Lane, Foodie City, FC 45678</p>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg">(123) 456-7890</p>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg">contact@thegildedspoon.com</p>
+<button class="flex items-center justify-center min-w-[84px] max-w-[480px] cursor-pointer rounded-md h-12 px-6 bg-[var(--brand-primary)] text-white text-base font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105 gap-2">
+<svg class="feather feather-map-pin" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span class="truncate">Get Directions</span>
+</button>
+</div>
+</div>
+<div class="rounded-lg overflow-hidden shadow-lg order-1 md:order-2 h-96 md:h-auto">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617351992015!2d-73.9878453845941!3d40.74844097932808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1681502741341!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-[var(--brand-secondary)]">
+<div class="max-w-5xl mx-auto px-4 sm:px-6">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-center mb-12">What Our Guests Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
+<div class="flex flex-col gap-4 p-6 sm:p-8 bg-white rounded-lg shadow-lg">
+<div class="flex items-center gap-4">
+<img alt="Sophia Bennett" class="size-12 sm:size-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUabcMzYtyUR3ZXtkQP9R2jZUD5wr2noHsYj3wwEq84o8sfx3yTEYuL_xuzeICYIjKQw5RkTJ2RKBbrh_lD3-fKRZu5OUJ2RvyyUaY03B0dkMuk60ylChReaB_15sDMov9zq4Uj1Z24TuSscZHg5yUa83tzv2h2Ic-KwHPk_9jG9ZfgzMgDx4t0QEmOEZit2FVPfXzB37PdqWpa5se_KQhmgGU3RSYVdMhprqyenF-qt1ho2dZZufcDXR1jq8ddE2-OVqWSc36hIBP"/>
+<div>
+<p class="text-[var(--text-primary)] text-base sm:text-lg font-semibold leading-normal">Sophia Bennett</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">June 15, 2024</p>
+</div>
+</div>
+<div class="flex gap-1 text-[var(--brand-primary)]">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+</div>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-loose">"The Gilded Spoon exceeded all expectations. The food was exquisite, the service impeccable, and the ambiance unforgettable. A truly exceptional dining experience."</p>
+</div>
+<div class="flex flex-col gap-4 p-6 sm:p-8 bg-white rounded-lg shadow-lg">
+<div class="flex items-center gap-4">
+<img alt="Ethan Carter" class="size-12 sm:size-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArs47Ryolgp07o6KfwGhgMBkX-sB3DzEnJSjVgTdOgkYjD5BvoAMI8DJWbFg28dIFjqSE2wbyo7_tkd2gcweu-srVSrsTdBvfFbTXKranjX9jzt-SWir3x0nj5UIkQdzuc8vmcMgpNEsCZ_Eunl9ErZC0gX7RrV2VEgJRoPwhRzu-FZwC0GpWNGt0wr1TzAlLw27zinKpp_evUz7ljPnd_3674qDWoDWqbgwrm7hqW50wEuxo2rFbqjY2rKBhjgFlwMDucQZvpAS2j"/>
+<div>
+<p class="text-[var(--text-primary)] text-base sm:text-lg font-semibold leading-normal">Ethan Carter</p>
+<p class="text-[var(--text-secondary)] text-sm font-normal leading-normal">May 20, 2024</p>
+</div>
+</div>
+<div class="flex gap-1 text-[var(--brand-primary)]">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z"></path></svg>
+</div>
+<p class="text-[var(--text-secondary)] text-base sm:text-lg font-normal leading-loose">"From the moment we walked in, we were treated like royalty. The staff was attentive, the food was divine, and the wine list was extensive. Highly recommend!"</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-cover bg-center" style='background-image: linear-gradient(rgba(252, 248, 248, 0.85), rgba(252, 248, 248, 0.85)), url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&amp;w=2940&amp;auto=format&amp;fit=crop")'>
+<div class="max-w-4xl mx-auto text-center px-4">
+<h2 class="text-[var(--text-primary)] text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">Ready to Indulge?</h2>
+<p class="text-[var(--text-secondary)] mt-4 text-lg sm:text-xl">Join us for an unforgettable dining experience.</p>
+<div class="mt-8">
+<button class="flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 sm:h-14 sm:px-8 bg-[var(--brand-primary)] text-[#fcf8f8] text-base sm:text-lg font-bold leading-normal tracking-wide hover:bg-[var(--brand-primary-hover)] transition-all duration-300 transform hover:scale-105">
+<span class="truncate">Reserve a Table</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[var(--brand-secondary)] py-12 px-4 sm:px-6">
+<div class="max-w-7xl mx-auto flex flex-col items-center gap-8">
+<div class="text-center">
+<p class="text-[var(--text-primary)] text-2xl font-bold">The Gilded Spoon</p>
+<p class="text-[var(--text-secondary)] text-base mt-2">© 2024. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
+</svg>
+</a>
+</div>
+<nav class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-center">
+<a class="text-[var(--text-secondary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-[var(--text-secondary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Terms of Service</a>
+<a class="text-[var(--text-secondary)] text-base font-medium leading-normal hover:text-[var(--brand-primary)] transition-colors duration-300" href="#">Contact Us</a>
+</nav>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
